@@ -39,5 +39,19 @@ dependencies {
 }
 
 test {
-    useTestNG()
+    useTestNG() {
+        suites file('src/test/resources/suite.xml')
+    }
+
+    testLogging {
+        outputs.upToDateWhen { false }
+        showStandardStreams = true
+    }
+
+    options {
+        systemProperties(System.getProperties())
+    }
+
+    // basically execution returns "GREEN" (framework exits with exit code > 0 if there were failures)
+    ignoreFailures = true
 }
