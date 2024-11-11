@@ -21,6 +21,11 @@ ext {
     version moduleVersion
 }
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
 // Do not move this integration because `group` and `version` is needed for publishing
 apply from: rootProject.file('publish.gradle')
 
