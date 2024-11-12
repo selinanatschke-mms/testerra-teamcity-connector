@@ -41,7 +41,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class SimpleTest2 extends TesterraTest {
 
-    private static final int TEST_DURATION = 6_000;
+    private static final int TEST_DURATION = 24_000;
 
     @Test(priority = 1)
     public void testT01_SimplePassedTest() {
