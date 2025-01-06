@@ -50,12 +50,12 @@ public class TeamCityMessagePusher {
 
         String teamCityMessage = "##teamcity[buildStatus ";
         if (optionalBuildStatus != null) {
-            teamCityMessage += "status='testwordstatus" + optionalBuildStatus.name() + "' ";
+            teamCityMessage += "status='" + optionalBuildStatus.name() + "' ";
         }
 
         teamCityMessage += "text='";
         if (enhance) {
-            teamCityMessage += "{build.status.text} ";
+            teamCityMessage += "testwordstatus {build.status.text} ";
         }
         teamCityMessage += message + "']";
         System.out.println(teamCityMessage);
