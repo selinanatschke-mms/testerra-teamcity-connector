@@ -36,7 +36,9 @@ public class TeamCityMessagePusher {
     public void updateProgressMessage(final String message) {
 
         final String teamCityMessage = "##teamcity[progressMessage 'testword " + message + "']";
+//        System.out.println("##teamcity[enableServiceMessages]");
         System.out.println(teamCityMessage);
+        System.out.println("##teamcity[disableServiceMessages]");
     }
 
     /**
