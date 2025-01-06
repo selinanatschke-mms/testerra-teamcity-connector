@@ -35,7 +35,7 @@ public class TeamCityMessagePusher {
      */
     public void updateProgressMessage(final String message) {
 
-        final String teamCityMessage = "##teamcity[progressMessage '" + message + "']";
+        final String teamCityMessage = "##teamcity[progressMessage 'testword " + message + "']";
         System.out.println(teamCityMessage);
     }
 
@@ -58,7 +58,6 @@ public class TeamCityMessagePusher {
             teamCityMessage += "{build.status.text} ";
         }
         teamCityMessage += message + "']";
-        System.out.println(teamCityMessage.replace("##", ""));
         System.out.println(teamCityMessage);
     }
 
